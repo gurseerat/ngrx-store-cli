@@ -1,6 +1,6 @@
 {
   "name": "ngrx-store-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A schematic to generate NgRx store slices",
   "keywords": [
     "schematics",
