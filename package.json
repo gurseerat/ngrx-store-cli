@@ -2,6 +2,9 @@
   "name": "ngrx-store-cli",
   "version": "1.0.5",
   "description": "A schematic to generate NgRx store slices",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
   "keywords": [
     "schematics",
     "ngrx",
