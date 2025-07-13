@@ -1,0 +1,14 @@
+import { ActionReducerMap } from '@ngrx/store';
+<% if (separateFiles) { %>
+import { <%= classify(name) %>Reducer, <%= classify(name) %>State } from '../reducers/<%= dasherize(name) %>.reducer';
+<% } else { %>
+import { <%= classify(name) %>Reducer, <%= classify(name) %>State } from './<%= dasherize(name) %>';
+<% } %>
+
+export interface AppState {
+  <%= classify(name) %>: <%= classify(name) %>State;
+}
+
+export const reducers: ActionReducerMap<AppState> = {
+  <%= classify(name) %>: <%= classify(name) %>Reducer
+};

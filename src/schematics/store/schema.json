@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "StoreOptions",
+  "title": "NgRx Store Options",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the feature/store slice.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "actions": {
+      "type": "string",
+      "description": "Comma-separated list of actions to generate."
+    },
+    "appState": {
+      "type": "boolean",
+      "default": false,
+      "alias": "a",
+      "description": "Include and update app-state.ts"
+    },
+    "separateFiles": {
+      "type": "boolean",
+      "default": false,
+      "alias": "s",
+      "description": "Place actions/reducers/selectors into separate folders"
+    },
+    "path": {
+      "type": "string",
+      "description": "The path where files should be generated."
+    }
+  },
+  "required": ["name"]
+}

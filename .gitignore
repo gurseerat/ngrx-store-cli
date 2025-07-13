@@ -1,0 +1,9 @@
+node_modules
+dist
+out-tsc
+test
+**/*.spec.ts
+tsconfig*.json
+.angular
+.idea
+.vscode

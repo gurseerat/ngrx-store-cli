@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json.schemastore.org/schematics",
+  "schematics": {
+    "store": {
+      "description": "Generate an NgRx store module",
+      "factory": "./dist/schematics/store/index.js#storeGenerator",
+      "schema": "./src/schematics/store/schema.json",
+      "aliases": ["ngrx-store"]
+    }
+  }
+}

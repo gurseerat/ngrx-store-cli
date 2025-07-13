@@ -1,0 +1,4 @@
+import { createAction } from '@ngrx/store';
+<% for(const action of actions) { %>
+export const <%= action %> = createAction('[<%= classify(name) %>] <%= action %>');
+<% } %>

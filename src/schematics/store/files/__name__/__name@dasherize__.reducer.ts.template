@@ -1,0 +1,23 @@
+import { createReducer, on } from '@ngrx/store';
+<% if (separateFiles) { %>
+import * as <%= classify(name) %>Actions from '../actions/<%= dasherize(name) %>.action';
+<% } else { %>
+import * as <%= classify(name) %>Actions from './<%= dasherize(name) %>.action';
+<% } %>
+export interface <%= classify(name) %>State {
+  // Define state interface here
+}
+
+export const initialState: <%= classify(name) %>State = {
+  // Fill the initial state
+};
+
+export const <%= classify(name) %>Reducer = createReducer(
+  initialState,
+  <% for(const action of actions) { %>
+    on(<%= classify(name) %>Actions.<%= action %>, (state) => ({
+      ...state
+      // handle state here
+    })),
+  <% } %>
+);
