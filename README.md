@@ -1,6 +1,7 @@
 # NgRx Store CLI
 
-[![npm version](https://badge.fury.io/js/ngrx-store-cli.svg)](https://www.npmjs.com/package/ngrx-store-cli)
+[![npm version](https://img.shields.io/npm/v/ngrx-store-cli.svg?color=brightgreen&label=version)](https://www.npmjs.com/package/ngrx-store-cli)
+[![GitHub](https://img.shields.io/badge/GitHub-gurseerat%2Fngrx--store--cli-blue?logo=github)](https://github.com/gurseerat/ngrx-store-cli)
 
 A schematic for Angular that simplifies the creation of NgRx store slices — including actions, reducers, selectors, effects, and automatic integration with your `app-state.ts`.
 

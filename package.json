@@ -18,6 +18,11 @@
     "schema.json",
     "README.md"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gurseerat/ngrx-store-cli.git"
+  },
+  "homepage": "https://github.com/gurseerat/ngrx-store-cli#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc && npm run copy:templates",
