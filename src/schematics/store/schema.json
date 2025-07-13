@@ -33,5 +33,5 @@
       "description": "The path where files should be generated."
     }
   },
-  "required": ["name"]
+  "required": ["name", "actions"]
 }

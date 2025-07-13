@@ -54,7 +54,6 @@ ng g ngrx-store-cli:store user --actions="load,loadSuccess" -a --path=src/app/st
 src/app/store/user/
 ├── user.actions.ts
 ├── user.reducer.ts
-├── user.effects.ts
 ├── user.selectors.ts
 ```
 
@@ -65,8 +64,6 @@ src/app/store/
 │   └── user.actions.ts
 ├── reducers/
 │   └── user.reducer.ts
-├── effects/
-│   └── user.effects.ts
 ├── selectors/
 │   └── user.selectors.ts
 ```
