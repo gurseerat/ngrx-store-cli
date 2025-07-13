@@ -10,7 +10,7 @@
   ],
   "license": "MIT",
   "author": "Gurseerat Kaur",
-  "type": "module",
+  "type": "commonjs",
   "schematics": "./collection.json",
   "files": [
     "dist/",
@@ -24,8 +24,8 @@
   },
   "homepage": "https://github.com/gurseerat/ngrx-store-cli#readme",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && npm run copy:templates",
+    "test": "jest",
+    "build": "tsc  -p tsconfig.json && npm run copy:templates",
     "copy:templates": "node copy-template.js"
   },
   "dependencies": {
@@ -35,6 +35,10 @@
     "typescript": "^5.8.3"
   },
   "devDependencies": {
-    "@angular-devkit/schematics-cli": "^20.0.5"
+    "@angular-devkit/schematics-cli": "^20.0.5",
+    "@types/jest": "^30.0.0",
+    "jest": "^30.0.4",
+    "ts-jest": "^29.4.0",
+    "update-notifier": "^5.1.0"
   }
 }

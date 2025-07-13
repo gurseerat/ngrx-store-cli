@@ -1,7 +1,8 @@
 import {
     apply,
     applyTemplates,
-    chain, filter,
+    chain,
+    filter,
     mergeWith,
     move,
     Rule,
@@ -10,7 +11,15 @@ import {
     url
 } from '@angular-devkit/schematics';
 import {strings} from '@angular-devkit/core';
-import {exec} from "node:child_process";
+const updateNotifier = require('update-notifier');
+import * as fs from 'fs';
+import * as path from 'path';
+
+// Read package.json manually
+const pkgPath = path.resolve(__dirname, '../../../package.json');
+const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
+
+updateNotifier({ pkg: pkg.default || pkg }).notify();
 
 export interface StoreOptions {
     name: string;
@@ -115,8 +124,8 @@ function updateAppStateFile(tree: Tree, context: SchematicContext, name: string,
     let content = tree.read(appStatePath)?.toString('utf-8') || '';
 
     const importPath = separateFiles
-        ? `../reducers/${dasherized}.reducer`
-        : `./${dasherized}/${dasherized}.reducer`;
+        ? `./reducers/${dasherized}.reducer`
+        : `./${dasherized}`;
 
     const importLine = `import { ${classed}Reducer, ${classed}State } from '${importPath}';`;
     if (!content.includes(importLine)) {

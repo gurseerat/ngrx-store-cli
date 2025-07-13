@@ -1,6 +1,6 @@
 import { ActionReducerMap } from '@ngrx/store';
 <% if (separateFiles) { %>
-import { <%= classify(name) %>Reducer, <%= classify(name) %>State } from '../reducers/<%= dasherize(name) %>.reducer';
+import { <%= classify(name) %>Reducer, <%= classify(name) %>State } from './reducers/<%= dasherize(name) %>.reducer';
 <% } else { %>
 import { <%= classify(name) %>Reducer, <%= classify(name) %>State } from './<%= dasherize(name) %>';
 <% } %>
