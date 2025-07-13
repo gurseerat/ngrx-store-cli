@@ -4,7 +4,7 @@
   "description": "A schematic to generate NgRx store slices",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
-  }
+  },
   "keywords": [
     "schematics",
     "ngrx",
